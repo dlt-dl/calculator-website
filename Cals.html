@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Compact Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calculator-container">
+
+  <!-- CALCULATOR -->
+  <div class="calculator">
+
+    <!-- DISPLAY + HISTORY BUTTON -->
+    <div class="display-wrapper">
+      <input type="text" id="display" class="display" placeholder="0" readonly />
+      <button id="historyToggle" class="history-btn">⋮</button>
+    </div>
+
+    <!-- TOP CONTROLS -->
+    <div class="top-controls">
+      <button id="darkToggle" class="toggle-btn">🌙</button>
+      <button id="sciToggle" class="toggle-btn">🧮</button>
+      <button id="currencyToggle" class="toggle-btn">💱</button>
+    </div>
+
+    <!-- BUTTON GRID -->
+    <div class="button-grid">
+      <button class="btn function-btn" data-value="C">C</button>
+      <button class="btn function-btn" data-value="DEL">DEL</button>
+      <button class="btn operator-btn" data-value="/">÷</button>
+      <button class="btn operator-btn" data-value="*">×</button>
+
+      <button class="btn number-btn" data-value="7">7</button>
+      <button class="btn number-btn" data-value="8">8</button>
+      <button class="btn number-btn" data-value="9">9</button>
+      <button class="btn operator-btn" data-value="-">−</button>
+
+      <button class="btn number-btn" data-value="4">4</button>
+      <button class="btn number-btn" data-value="5">5</button>
+      <button class="btn number-btn" data-value="6">6</button>
+      <button class="btn operator-btn" data-value="+">+</button>
+
+      <button class="btn number-btn" data-value="1">1</button>
+      <button class="btn number-btn" data-value="2">2</button>
+      <button class="btn number-btn" data-value="3">3</button>
+      <button class="btn equals-btn" data-value="=">=</button>
+
+      <button class="btn number-btn" data-value="0" style="grid-column: span 2;">0</button>
+      <button class="btn number-btn" data-value=".">.</button>
+    </div>
+
+    <!-- SCIENTIFIC PANEL -->
+    <div class="scientific-panel" id="scientificPanel">
+      <div class="sci-scroll">
+        <button class="btn sci-btn" data-value="sin(">sin</button>
+        <button class="btn sci-btn" data-value="cos(">cos</button>
+        <button class="btn sci-btn" data-value="tan(">tan</button>
+        <button class="btn sci-btn" data-value="log(">log</button>
+        <button class="btn sci-btn" data-value="ln(">ln</button>
+        <button class="btn sci-btn" data-value="sqrt(">√</button>
+        <button class="btn sci-btn" data-value="π">π</button>
+        <button class="btn sci-btn" data-value="e">e</button>
+        <button class="btn sci-btn" data-value="^">^</button>
+      </div>
+    </div>
+
+    <!-- CURRENCY PANEL -->
+    <div class="currency-panel" id="currencyPanel">
+      <h3>Currency Converter</h3>
+
+      <input type="number" id="currencyAmount" placeholder="Enter amount">
+
+      <div class="currency-row">
+        <select id="fromCurrency"></select>
+        <select id="toCurrency"></select>
+      </div>
+
+      <button id="convertCurrencyBtn">Convert</button>
+      <p id="currencyResult"></p>
+    </div>
+
+    <div class="info-section">Compact Calculator v5.0</div>
+  </div>
+
+  <!-- HISTORY PANEL -->
+  <div class="history-panel" id="historyPanel">
+    <div class="history-header">
+      History
+      <button id="clearHistory">Clear</button>
+    </div>
+    <ul id="historyList"></ul>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
